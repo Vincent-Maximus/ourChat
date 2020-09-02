@@ -34,15 +34,16 @@ class _SignInState extends State<SignIn> {
       HelperFunctions.saveUserEmailSharedPreference(
           emailTextEditingController.text);
 
-      setState(() {
-        isLoading = true;
-      });
-
       databaseMethods.getUserByUserEmail(emailTextEditingController.text)
           .then((val){
         snapshotUserInfo = val;
         HelperFunctions
             .saveUserNameSharedPreference(snapshotUserInfo.documents[0].data["name"]);
+//        print("${snapshotUserInfo.documents[0].data["name"]} this is not good");
+      });
+
+      setState(() {
+        isLoading = true;
       });
 
       authMethods

@@ -6,6 +6,7 @@ INJECTED from C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\android\a
 INJECTED from C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\android\app\src\main\AndroidManifest.xml:1:1-47:12
 MERGED from [:firebase_auth] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:cloud_firestore] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\vjpma\.gradle\caches\transforms-2\files-2.1\5fc3fee7c271862c68f6fe7fadbd7329\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
@@ -133,6 +134,8 @@ INJECTED from C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\android\a
 INJECTED from C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Users\vjpma\AndroidStudioProjects\flutter_app\ourchat\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44

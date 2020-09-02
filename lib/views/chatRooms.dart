@@ -11,21 +11,23 @@ class ChatRoom extends StatefulWidget {
   _ChatRoomState createState() => _ChatRoomState();
 }
 
+
+class _ChatRoomState extends State<ChatRoom> {
+
   AuthMethods authMethods = new AuthMethods();
 
   @override
   void initState() {
     getUserInfo();
-    initState();
-//    super.initState();
+    super.initState();
   }
-
 
   getUserInfo() async{
     Contants.myName = await HelperFunctions.getUserNameSharedPreference();
+    setState(() {
+    });
   }
 
-class _ChatRoomState extends State<ChatRoom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
