@@ -1,7 +1,7 @@
 
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:ourchat/model/user.dart';
+import 'package:ourchat/models/user.dart';
 
 class AuthMethods{
 

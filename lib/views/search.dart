@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ourchat/helper/constants.dart';
 import 'package:ourchat/services/database.dart';
 import 'package:ourchat/widgets/widget.dart';
 
 import 'chatRooms.dart';
+import 'conversationScreen.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -29,10 +31,25 @@ class _SearchScreenState extends State<SearchScreen> {
     });
   }
 
-  Widget searchList(){
-    print("testtje");
-    print( searchSnapshot.documents);
+  //create chatroom... send user to conversation screen push replacement
+  createChatRoomAndStartConversation(String userName){
 
+    String chatRoomId = getChatRoomId(userName, Contants.myName);
+
+    List<String> users = [userName, Contants.myName];
+    Map<String, dynamic> chatRoomMap = {
+      "users" : users,
+      "ChatRoomId" : chatRoomId
+    };
+
+    databaseMethods.createChatRoom(chatRoomId, chatRoomMap);
+    Navigator.push(context, MaterialPageRoute(
+        builder: (context) => ConversationScreen()
+    ));
+  }
+
+
+  Widget searchList(){
     return searchSnapshot != null? ListView.builder(
         itemCount: searchSnapshot.documents.length,
           shrinkWrap: true,
@@ -42,6 +59,11 @@ class _SearchScreenState extends State<SearchScreen> {
             userEmail: searchSnapshot.documents[index].data["email"],
           );
           }) : Container();
+  }
+
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
@@ -135,20 +157,34 @@ class SearchTitle extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(userName, style: displayTextStyle(),),
-              Text(userEmail, style: displayTextStyle(),)
+              Text(userEmail, style: fractionDisplayTextStyle(),)
             ],
           ),
           Spacer(),
-          Container(
-            decoration: BoxDecoration(
-              color: Color(0xFFF7E161),
-              borderRadius: BorderRadius.circular(30)
+          GestureDetector(
+            onTap: (){
+              createChatRoomAndStartConversation();
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Color(0xFFF7E161),
+                borderRadius: BorderRadius.circular(30)
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              child: Text("Message",style: displayTextStyle(),),
             ),
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: Text("Message",style: displayTextStyle(),),
           ),
         ],
       ),
     );
+  }
+}
+
+
+getChatRoomId(String a, String b){
+  if(a.substring(0, 1).codeUnitAt(0) > b.substring(0, 1).codeUnitAt(0)){
+    return "$b\_$a";
+  } else {
+    return "$a\_$b";
   }
 }
