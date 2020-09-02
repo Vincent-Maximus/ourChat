@@ -2,6 +2,10 @@
 
 ourChat is a Messenger App 
 
+## Progress
+
+Currently in development 
+
 ## About
 
 There are many great chat apps available, like WhatsApp, Messenger, Instagram, Messages,
